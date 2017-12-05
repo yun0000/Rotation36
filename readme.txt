@@ -12,7 +12,7 @@ Your description start form next line and do not delete lines upto this point.
 
 trivial-->>   이윤주
 juggle-->>    이윤주
-blockswap-->>
+blockswap-->> 이윤주
 reverse-->>
 clock-->>
 printhead-->>
