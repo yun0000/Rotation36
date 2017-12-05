@@ -1,3 +1,4 @@
+#include "헤더.h"
 int gendata() {
 	if (scanf("%d", &n) == EOF) {
 		return 0;
@@ -22,4 +23,17 @@ void trivial(char*tri) {
 			tri[i + 1] = c;
 		}
 	}
+}
+
+void juggle(char *jug) {
+	char *temp = (char*)malloc(sizeof(char)*(d + 1));
+	int count = 0;
+	strncpy(temp, jug, d);
+	for (count = 0; count < (n / d) - 1; count++) {
+		strncpy(jug + d*count, jug + d*(count + 1), d);
+	}
+	strncpy(jug + d*count, jug + d*(count + 1), n - d*(count + 1));
+	strncpy(jug + (n - d), temp, d);
+	jug[n] = '\0';
+	free(temp);
 }
