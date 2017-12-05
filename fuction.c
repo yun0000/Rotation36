@@ -37,3 +37,8 @@ void juggle(char *jug) {
 	jug[n] = '\0';
 	free(temp);
 }
+
+void printresult(){
+	
+	printf("%d\t\t%d\t\t%lf\t%lf\t%lf\t%lf\n", n, d, time1, time2, time3, time4);
+}
