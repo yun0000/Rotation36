@@ -10,8 +10,8 @@ Your description start form next line and do not delete lines upto this point.
 - - - - - - - - - - - - - - - - - - - -
 *만들 함수 내역*
 
-trivial-->>
-juggle-->>
+trivial-->>   이윤주
+juggle-->>    이윤
 blockswap-->>
 reverse-->>
 clock-->>
