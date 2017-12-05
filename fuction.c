@@ -1,4 +1,3 @@
-#include "헤더.h"
 int gendata() {
 	if (scanf("%d", &n) == EOF) {
 		return 0;
@@ -25,20 +24,27 @@ void trivial(char*tri) {
 	}
 }
 
-void juggle(char *jug) {
-	char *temp = (char*)malloc(sizeof(char)*(d + 1));
-	int count = 0;
-	strncpy(temp, jug, d);
-	for (count = 0; count < (n / d) - 1; count++) {
-		strncpy(jug + d*count, jug + d*(count + 1), d);
+void blockswap(char *str, int d, int n) 
+{	
+	if (d == 0 || d == n)
+	{
+		return;
 	}
-	strncpy(jug + d*count, jug + d*(count + 1), n - d*(count + 1));
-	strncpy(jug + (n - d), temp, d);
-	jug[n] = '\0';
-	free(temp);
+	
+	if (n - d == d)
+	{
+		swap(str, 0, n-d, d);
+		return;
+	}
+	else 
+	{
+		swap(str, 0, d, n-d);
+		blockswap(str + n - d, (2*d)-n, d);
+	}
 }
 
-void printresult(){
-	
-	printf("%d\t\t%d\t\t%lf\t%lf\t%lf\t%lf\n", n, d, time1, time2, time3, time4);
+
+void printhead() 
+{		
+	printf("StrLength\tRotateDistance\tT.trivial\tT.juggle\tT.bw\t\tT.reverse\t\n");
 }
