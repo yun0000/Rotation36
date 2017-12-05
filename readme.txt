@@ -12,11 +12,11 @@ Your description start form next line and do not delete lines upto this point.
 
 trivial-->>   이윤주
 juggle-->>    이윤주
-blockswap-->>
-reverse-->>
-clock-->>
-printhead-->>
-printresult-->>
+blockswap-->> 김혜리
+reverse-->>   고재원
+clock-->>     고재원
+printhead-->> 김혜리
+printresult-->>송민준
 
 
 이중 하나 골라서 만들어 주시면 됩니다.
