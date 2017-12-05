@@ -24,6 +24,19 @@ void trivial(char*tri) {
 	}
 }
 
+void juggle(char *jug) {
+	char *temp = (char*)malloc(sizeof(char)*(d + 1));
+	int count = 0;
+	strncpy(temp, jug, d);
+	for (count = 0; count < (n / d) - 1; count++) {
+		strncpy(jug + d*count, jug + d*(count + 1), d);
+	}
+	strncpy(jug + d*count, jug + d*(count + 1), n - d*(count + 1));
+	strncpy(jug + (n - d), temp, d);
+	jug[n] = '\0';
+	free(temp);
+}
+
 void blockswap(char *str, int d, int n) 
 {	
 	if (d == 0 || d == n)
